@@ -1,1 +1,1 @@
-# spring_seisme
+Il s'agit de l'exercice seisme avec Spring dans le cadre de la formation JAVA
