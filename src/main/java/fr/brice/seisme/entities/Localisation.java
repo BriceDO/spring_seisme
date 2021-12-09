@@ -1,7 +1,12 @@
 package fr.brice.seisme.entities;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class Localisation {
 
+    @Id
     String id;
     String nom;
     String code;
