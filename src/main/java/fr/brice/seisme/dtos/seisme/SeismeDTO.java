@@ -5,14 +5,16 @@ public class SeismeDTO {
     private String id;
     private String nom;
     private float magnitude;
+    private String Localisation;
     private String date;
 
     public SeismeDTO() {}
 
-    public SeismeDTO(String id, String nom, float magnitude, String date) {
+    public SeismeDTO(String id, String nom, float magnitude, String localisation, String date) {
         this.id = id;
         this.nom = nom;
         this.magnitude = magnitude;
+        Localisation = localisation;
         this.date = date;
     }
 
@@ -47,5 +49,13 @@ public class SeismeDTO {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public String getLocalisation() {
+        return Localisation;
+    }
+
+    public void setLocalisation(String localisation) {
+        Localisation = localisation;
     }
 }
