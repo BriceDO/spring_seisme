@@ -1,6 +1,7 @@
 package fr.brice.seisme.entities;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
@@ -10,13 +11,14 @@ public class Seisme {
     private String id;
     private String nom;
     private float magnitude;
-    private String localisation;
+    @DBRef
+    private Localisation localisation;
     private String date;
 
     public Seisme() {} // Constructeur vide
 
     // Constructeur plein
-    public Seisme(String id, String nom, float magnitude, String localisation, String date) {
+    public Seisme(String id, String nom, float magnitude, Localisation localisation, String date) {
         this.id = id;
         this.nom = nom;
         this.magnitude = magnitude;
@@ -49,11 +51,11 @@ public class Seisme {
         this.magnitude = magnitude;
     }
 
-    public String getLocalisation() {
+    public Localisation getLocalisation() {
         return localisation;
     }
 
-    public void setLocalisation(String localisation) {
+    public void setLocalisation(Localisation localisation) {
         this.localisation = localisation;
     }
 

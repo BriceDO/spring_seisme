@@ -1,15 +1,17 @@
 package fr.brice.seisme.dtos.seisme;
 
+import fr.brice.seisme.dtos.localisation.LocalisationDTO;
+
 public class SeismeSaveDTO {
 
     private String nom;
     private float magnitude;
-    private String localisation;
+    private LocalisationDTO localisation;
     private String date;
 
     public SeismeSaveDTO() {}
 
-    public SeismeSaveDTO(String nom, float magnitude, String localisation, String date) {
+    public SeismeSaveDTO(String nom, float magnitude, LocalisationDTO localisation, String date) {
         this.nom = nom;
         this.magnitude = magnitude;
         this.localisation = localisation;
@@ -41,11 +43,11 @@ public class SeismeSaveDTO {
         this.date = date;
     }
 
-    public String getLocalisation() {
+    public LocalisationDTO getLocalisation() {
         return localisation;
     }
 
-    public void setLocalisation(String localisation) {
+    public void setLocalisation(LocalisationDTO localisation) {
         this.localisation = localisation;
     }
 }
